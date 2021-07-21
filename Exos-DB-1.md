@@ -18,15 +18,15 @@ Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces
 
 Reponse: 
 
-	```sql
-	CREATE TABLE users (id SERIAL PRIMARY KEY, name VARCHAR(30), password VARCHAR(30));
-	```
-	```sql
-	INSERT INTO users (name, password) VALUES ('alice', 123), ('bob', 456), ('charlie', 789);
-	```
-	```sql
-	SELECT * FROM users;
-	```
+```sql
+CREATE TABLE users (id SERIAL PRIMARY KEY, name VARCHAR(30), password VARCHAR(30));
+```
+```sql
+INSERT INTO users (name, password) VALUES ('alice', 123), ('bob', 456), ('charlie', 789);
+```
+```sql
+SELECT * FROM users;
+```
 
 # 2
 
@@ -36,9 +36,9 @@ Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces
 
 Reponse: 
 
-	```sql
-	INSERT INTO users (name, password) VALUES ('dan', 101112), ('eve', 131415), ('faythe', 161718);
-	```
+```sql
+INSERT INTO users (name, password) VALUES ('dan', 101112), ('eve', 131415), ('faythe', 161718);
+```
 
 # 3
 
@@ -47,9 +47,9 @@ Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces
 
 Reponse: 
 
-	```sql
-	SELECT * FROM users WHERE LENGTH(users.password) > 3;
-	```
+```sql
+SELECT * FROM users WHERE LENGTH(users.password) > 3;
+```
 
 # 4
 
@@ -58,9 +58,9 @@ Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces
 
 Reponse: 
 
-	```sql
-	ALTER TABLE users ADD COLUMN bio TEXT DEFAULT 'Hello, world!';
-	```
+```sql
+ALTER TABLE users ADD COLUMN bio TEXT DEFAULT 'Hello, world!';
+```
 
 # 5
 
@@ -71,9 +71,9 @@ Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces
 
 Reponse:
 
- 	```sql
-	UPDATE users SET bio = FORMAT('Hello, I am %s', name);
-	```
+```sql
+UPDATE users SET bio = FORMAT('Hello, I am %s', name);
+```
 
 # 6
 
@@ -82,9 +82,9 @@ Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces
 
 Reponse: 
 
-	```sql
-	SELECT * FROM users ORDER BY id DESC LIMIT 2;
-	```
+```sql
+SELECT * FROM users ORDER BY id DESC LIMIT 2;
+```
 
 # 7
 
@@ -93,9 +93,9 @@ Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces
 
 Reponse: 
 
-	```sql
-	SELECT * FROM users WHERE MOD(id, 2) = 1 ORDER BY id ASC;
-	```
+```sql
+SELECT * FROM users WHERE MOD(id, 2) = 1 ORDER BY id ASC;
+```
 
 # 8
 
@@ -105,12 +105,12 @@ Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces
 
 Reponse: 
 
-	```sql
-	DELETE FROM users WHERE MOD(id, 2) = 0;
-	```
-	```sql
-	SELECT * FROM users;
-	```
+```sql
+DELETE FROM users WHERE MOD(id, 2) = 0;
+```
+```sql
+SELECT * FROM users;
+```
 
 # 9
 
@@ -120,9 +120,10 @@ Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces
 
 Reponse: 
 
-	```sql
-	DROP TABLE users;
-	```
-	```sql
-	DROP DATABASE db_1;
-	```
+```sql
+DROP TABLE users;
+```
+
+```sql
+DROP DATABASE db_1;
+```
