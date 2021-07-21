@@ -17,16 +17,12 @@ Ensuite afficher toutes les lignes de la table "users" de la base de donnée "db
 Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces commandes.
 
 Reponse: 
-
-	```sh
+  ```s
 	CREATE TABLE users (id SERIAL PRIMARY KEY, name VARCHAR(30), password VARCHAR(30));
-	```
-	```sh
+  ```
 	INSERT INTO users (name, password) VALUES ('alice', 123), ('bob', 456), ('charlie', 789);
-	```
-	```sh
+
 	SELECT * FROM users;
-	```
 
 # 2
 
