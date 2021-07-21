@@ -17,9 +17,14 @@ Ensuite afficher toutes les lignes de la table "users" de la base de donnée "db
 Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces commandes.
 
 Reponse: 
-	```shell
+
+	```sh
 	CREATE TABLE users (id SERIAL PRIMARY KEY, name VARCHAR(30), password VARCHAR(30));
+	```
+	```sh
 	INSERT INTO users (name, password) VALUES ('alice', 123), ('bob', 456), ('charlie', 789);
+	```
+	```sh
 	SELECT * FROM users;
 	```
 
@@ -30,7 +35,8 @@ Affichez toutes les lignes de la table "users" de la base de donnée "db_1".
 Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces commandes.
 
 Reponse: 
-	```shell
+
+	```sh
 	INSERT INTO users (name, password) VALUES ('dan', 101112), ('eve', 131415), ('faythe', 161718);
 	```
 
@@ -40,7 +46,8 @@ Affichez toutes les lignes de la table "users" de la base de donnée "db_1" dont
 Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces commandes.
 
 Reponse: 
-	```shell
+
+	```sh
 	SELECT * FROM users WHERE LENGTH(users.password) > 3;
 	```
 
@@ -50,7 +57,8 @@ Modifiez la table "users" afin d'ajouter une nouvelle colonne "bio" qui contiend
 Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces commandes.
 
 Reponse: 
-	```shell
+
+	```sh
 	ALTER TABLE users ADD COLUMN bio TEXT DEFAULT 'Hello, world!';
 	```
 
@@ -62,7 +70,8 @@ Il faudra pour cela utiliser la fonction `FORMAT`.
 Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces commandes.
 
 Reponse:
- 	```shell
+
+ 	```sh
 	UPDATE users SET bio = FORMAT('Hello, I am %s', name);
 	```
 
@@ -72,7 +81,8 @@ Afficher les 2 lignes qui ont les "id" les plus grands par ordre décroissant.
 Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces commandes.
 
 Reponse: 
-	```shell
+
+	```sh
 	SELECT * FROM users ORDER BY id DESC LIMIT 2;
 	```
 
@@ -82,7 +92,8 @@ Afficher toutes les lignes de la table "users" dont les "id" sont impairs par or
 Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces commandes.
 
 Reponse: 
-	```shell
+
+	```sh
 	SELECT * FROM users WHERE MOD(id, 2) = 1 ORDER BY id ASC;
 	```
 
@@ -93,8 +104,11 @@ Affichez toutes les lignes de la table users.
 Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces commandes.
 
 Reponse: 
-	```shell
+
+	```sh
 	DELETE FROM users WHERE MOD(id, 2) = 0;
+	```
+	```sh
 	SELECT * FROM users;
 	```
 
@@ -105,7 +119,10 @@ Effacer la DATABASE "db_1".
 Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces commandes.
 
 Reponse: 
-	```shell
+
+	```sh
 	DROP TABLE users;
+	```
+	```sh
 	DROP DATABASE db_1;
 	```
