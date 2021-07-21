@@ -17,12 +17,16 @@ Ensuite afficher toutes les lignes de la table "users" de la base de donnée "db
 Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces commandes.
 
 Reponse: 
-  ```s
-	CREATE TABLE users (id SERIAL PRIMARY KEY, name VARCHAR(30), password VARCHAR(30));
-  ```
-	INSERT INTO users (name, password) VALUES ('alice', 123), ('bob', 456), ('charlie', 789);
 
+	```sql
+	CREATE TABLE users (id SERIAL PRIMARY KEY, name VARCHAR(30), password VARCHAR(30));
+	```
+	```sql
+	INSERT INTO users (name, password) VALUES ('alice', 123), ('bob', 456), ('charlie', 789);
+	```
+	```sql
 	SELECT * FROM users;
+	```
 
 # 2
 
@@ -32,7 +36,7 @@ Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces
 
 Reponse: 
 
-	```sh
+	```sql
 	INSERT INTO users (name, password) VALUES ('dan', 101112), ('eve', 131415), ('faythe', 161718);
 	```
 
@@ -43,7 +47,7 @@ Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces
 
 Reponse: 
 
-	```sh
+	```sql
 	SELECT * FROM users WHERE LENGTH(users.password) > 3;
 	```
 
@@ -54,7 +58,7 @@ Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces
 
 Reponse: 
 
-	```sh
+	```sql
 	ALTER TABLE users ADD COLUMN bio TEXT DEFAULT 'Hello, world!';
 	```
 
@@ -67,7 +71,7 @@ Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces
 
 Reponse:
 
- 	```sh
+ 	```sql
 	UPDATE users SET bio = FORMAT('Hello, I am %s', name);
 	```
 
@@ -78,7 +82,7 @@ Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces
 
 Reponse: 
 
-	```sh
+	```sql
 	SELECT * FROM users ORDER BY id DESC LIMIT 2;
 	```
 
@@ -89,7 +93,7 @@ Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces
 
 Reponse: 
 
-	```sh
+	```sql
 	SELECT * FROM users WHERE MOD(id, 2) = 1 ORDER BY id ASC;
 	```
 
@@ -101,10 +105,10 @@ Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces
 
 Reponse: 
 
-	```sh
+	```sql
 	DELETE FROM users WHERE MOD(id, 2) = 0;
 	```
-	```sh
+	```sql
 	SELECT * FROM users;
 	```
 
@@ -116,9 +120,9 @@ Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces
 
 Reponse: 
 
-	```sh
+	```sql
 	DROP TABLE users;
 	```
-	```sh
+	```sql
 	DROP DATABASE db_1;
 	```
